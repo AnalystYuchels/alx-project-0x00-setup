@@ -1,25 +1,27 @@
 import Button from "@/components/Button";
-import React from "react";
 import Card from "@/components/Card";
 
 const Landing: React.FC = () => {
-  return (
-    <div className="flex flex-col items-center p-5">
-      <h1 className=" text-xl font-extralight">Landing Page</h1>
-      
-      {/* Single Card */}
-      <Card />
+    return(
+        <div>
+            <h1 className="text-xl font-extraLight">Landing Page</h1>
+            <Card />
 
-      {/* Multiple Cards */}
-      <Card />
-      <Card />
+<Button title="Click Me" styles="bg-red-500"/>
 
-      <Button title="Small Rounded-sm" styles="text-sm rounded-sm bg-red-500" />
-      <Button title="Medium Rounded-md" styles="text-base rounded-md bg-green-500" />
-      <Button title="Large Rounded-lg" styles="text-lg rounded-lg bg-purple-500" />
 
-    </div>
-  );
-};
+<Button title="Small Button" size="small" shape="rounded-sm" styles="bg-green-500"/>
+<Button title="Small Button" size="small" shape="rounded-md" styles="bg-green-500"/>
+<Button title="Small Button" size="small" shape="rounded-full" styles="bg-green-500"/>
+<Button title="Large Rounded" size="large" shape="rounded-lg" styles="bg-purple-500" />
+
+<Button 
+  title="Custom Button" styles="bg-blue-500"
+  className="bg-green-500 hover:bg-green-600" 
+  onClick={() => console.log('Clicked!')}
+/>
+        </div>
+    )
+}
 
 export default Landing;
